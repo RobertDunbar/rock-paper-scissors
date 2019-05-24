@@ -7,36 +7,39 @@
     </head>
     <body>
         <script>
+            const PLAYER_WIN = 0;
+            const COMPUTER_WIN = 1;
+            const DRAW = 2;
             function playRound( playerSelection, computerSelection) {
                 let thisWinner;
                 switch (computerSelection) {
                     case "rock":
                         if (playerSelection === "paper") {
-                            thisWinner = 0;
+                            thisWinner = PLAYER_WIN;
                         } else if (playerSelection === "rock") {
-                            thisWinner = 2;
+                            thisWinner = COMPUTER_WIN;
                         } else {
-                             thisWinner = 1;
+                             thisWinner = DRAW;
                         }
                     return thisWinner;
                     break;
                     case "paper":
                     if (playerSelection === "scissors") {
-                            thisWinner = 0;
+                            thisWinner = PLAYER_WIN;
                         } else if (playerSelection === "paper") {
-                            thisWinner = 2;
+                            thisWinner = COMPUTER_WIN;
                         } else {
-                             thisWinner = 1;
+                             thisWinner = DRAW;
                         }
                     return thisWinner;
                     break;
                     case "scissors":
                     if (playerSelection === "rock") {
-                            thisWinner = 0;
+                            thisWinner = PLAYER_WIN;
                         } else if (playerSelection === "scissors") {
-                            thisWinner = 2;
+                            thisWinner = COMPUTER_WIN;
                         } else {
-                             thisWinner = 1;
+                             thisWinner = DRAW;
                         }
                     return thisWinner;
                     break;
